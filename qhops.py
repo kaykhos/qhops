@@ -430,7 +430,7 @@ class simulator():
         graph, node_cols, edge_cols = self._return_graph(include_sinks=include_sinks,
                                                          binary_colors=binary_colors,
                                                          max_sinks=max_sinks)
-        pos = nx.spring_layout(graph, iterations=500)
+        pos = nx.spring_layout(graph, iterations=1500)
         vmin = min(node_cols + edge_cols)
         vmax = max(node_cols + edge_cols)
         cmap=plt.cm.Blues
